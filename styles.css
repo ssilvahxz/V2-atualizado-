@@ -1,0 +1,60 @@
+*{box-sizing:border-box}
+body{margin:0;background:#06070c;color:#f7f7fb;font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif}
+button,input,select,textarea{font:inherit}
+button{cursor:pointer}
+.top{height:70px;background:#0b0d14;border-bottom:1px solid #202437;display:flex;align-items:center;gap:16px;padding:0 22px;position:sticky;top:0;z-index:20}
+.brand{font-weight:950;font-size:21px;white-space:nowrap}
+.brand em{font-style:normal;color:#9b6cff}
+.search{flex:1;max-width:650px;background:#111522;border:1px solid #292f44;color:#fff;border-radius:12px;padding:11px 14px;outline:none}
+.nav{display:flex;gap:8px;margin-left:auto}
+.btn{background:#171b2a;border:1px solid #292f44;color:#fff;padding:10px 14px;border-radius:10px}
+.primary{background:linear-gradient(135deg,#8a5cff,#5e3bff);border:0}
+.layout{display:flex}
+.side{width:245px;height:calc(100vh - 70px);position:sticky;top:70px;background:#090b12;border-right:1px solid #202437;padding:18px 13px;overflow-y:auto}
+.side button{width:100%;border:0;background:transparent;color:#aeb5c8;text-align:left;padding:12px;border-radius:10px;margin-bottom:4px}
+.side button:hover,.side .active{background:#171b2a;color:#fff}
+.main{width:100%;max-width:1500px;margin:auto;padding:30px}
+.hero{border:1px solid #2a3150;border-radius:22px;padding:40px;background:radial-gradient(circle at 80% 10%,#7d51ff33,transparent 35%),linear-gradient(135deg,#111629,#0b0e18)}
+.hero .logoMark{font-size:12px;letter-spacing:3px;color:#a88aff}
+.hero h1{font-size:clamp(38px,6vw,68px);line-height:.98;max-width:850px;margin:12px 0}
+.hero p{font-size:18px;color:#aeb5c8;max-width:700px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:28px}
+.stat,.panel,.card{background:#0f121d;border:1px solid #252b40;border-radius:16px}
+.stat{padding:16px}
+.stat b{display:block;font-size:25px}
+.muted{color:#8e97ac}
+.section{margin:30px 0}
+.head{display:flex;justify-content:space-between;align-items:center;margin-bottom:15px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px}
+.card{overflow:hidden}
+.card:hover{border-color:#6547b8;transform:translateY(-2px)}
+.cover{height:135px;background:linear-gradient(135deg,#171d42,#7149bd);display:grid;place-items:center;font-size:34px;font-weight:900}
+.body{padding:15px}
+.body h3{margin:5px 0 8px;font-size:16px}
+.tag{display:inline-block;background:#1b2031;border-radius:99px;padding:5px 9px;color:#bfc6d8;font-size:11px}
+.row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.space{justify-content:space-between}
+.course{display:grid;grid-template-columns:1.4fr .7fr;gap:20px}
+.panel{padding:20px}
+.lesson{display:flex;align-items:center;gap:12px;padding:12px;margin:7px 0;background:#0b0e17;border:1px solid #242a3d;border-radius:10px}
+.lesson button{margin-left:auto}
+.done{border-color:#27624e}
+.progress{height:8px;background:#20263a;border-radius:99px;overflow:hidden}
+.progress i{height:100%;display:block;background:#8a5cff}
+.table{width:100%;border-collapse:collapse}
+.table th,.table td{text-align:left;padding:12px;border-bottom:1px solid #242a3d}
+.modal-bg{position:fixed;inset:0;background:#000b;display:grid;place-items:center;z-index:99}
+.modal{width:min(540px,92vw);background:#101421;border:1px solid #303851;border-radius:17px;padding:22px}
+.modal input,.modal select,.modal textarea{width:100%;margin:6px 0 13px;padding:11px;background:#080b12;color:white;border:1px solid #2b334a;border-radius:9px}
+.footer{text-align:center;color:#737d94;border-top:1px solid #202437;margin-top:40px;padding:35px}
+.empty{text-align:center;padding:60px;color:#9099ad}
+.imgGallery{display:grid;gap:14px;margin:16px 0}
+.lessonImg{margin:0;border:1px solid #292f44;border-radius:12px;overflow:hidden;background:#080b12}
+.lessonImg img{display:block;width:100%;height:320px;object-fit:cover;background:linear-gradient(135deg,#171d42,#5e3bff)}
+.lessonImg figcaption{padding:12px 14px;font-size:13px;color:#c7cce0;background:#111522}
+.lessonImg.imgFallback img{display:none}
+.lessonImg.imgFallback::before{content:"🖼️ Imagem indisponível no momento — clique em Regenerar";display:grid;place-items:center;height:220px;color:#aeb5c8;font-size:13px;text-align:center;padding:20px;background:linear-gradient(135deg,#171d42,#5e3bff)}
+.imgAdminBar{display:flex;gap:8px;padding:0 14px 14px;flex-wrap:wrap}
+.imgAdminBar .btn{padding:8px 12px;font-size:12px}
+@media(max-width:900px){.side{display:none}.main{padding:18px}.stats{grid-template-columns:repeat(2,1fr)}.course{grid-template-columns:1fr}.desktop{display:none}}
+@media(max-width:520px){.main{padding:12px}.hero{padding:25px}.grid{grid-template-columns:1fr 1fr}.stats{gap:8px}.brand{font-size:17px}.search{min-width:0}.nav{gap:4px}}
